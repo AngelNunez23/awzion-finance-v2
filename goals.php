@@ -157,7 +157,6 @@ $goals = $stmt->fetchAll();
                 : 0;
 
             $progress = min($progress, 100);
-
             $missing = max($target - $current, 0);
             ?>
 
@@ -173,17 +172,18 @@ $goals = $stmt->fetchAll();
                         </p>
                     </div>
 
-                    <span>
-                        <?= number_format($progress, 0) ?>%
-                    </span>
-
                 </div>
 
-                <div class="progress-bar">
+                <!-- 🔥 BARRA DOURADA -->
+                <div style="width:100%; height:18px; background:#1f2937; border-radius:999px; overflow:hidden; margin:18px 0;">
 
                     <div 
-                        class="progress-fill"
-                        style="width: <?= $progress ?>%;"
+                        style="
+                            width:<?= $progress > 0 ? $progress : 2 ?>%;
+                            height:18px;
+                            background:linear-gradient(90deg,#d4af37,#f1d57c);
+                            border-radius:999px;
+                        "
                     ></div>
 
                 </div>
@@ -202,7 +202,7 @@ $goals = $stmt->fetchAll();
 
                 </div>
 
-                <!-- 🔥 NOVA PARTE -->
+                <!-- 🔥 ATUALIZAR META -->
                 <form 
                     action="update_goal.php" 
                     method="POST"
