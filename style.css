@@ -34,6 +34,7 @@ a {
 }
 
 /* LOGIN */
+
 .login-body {
     min-height: 100vh;
     display: grid;
@@ -83,6 +84,7 @@ a {
 }
 
 /* APP */
+
 .app-shell {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -134,6 +136,7 @@ nav {
 }
 
 /* MAIN */
+
 .main-content {
     padding: 28px;
 }
@@ -163,6 +166,7 @@ nav {
 }
 
 /* CARDS */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -204,6 +208,7 @@ nav {
 }
 
 /* GRID */
+
 .grid {
     display: grid;
     gap: 20px;
@@ -218,6 +223,7 @@ nav {
 }
 
 /* PANELS */
+
 .panel {
     padding: 22px;
 }
@@ -231,6 +237,7 @@ nav {
 }
 
 /* FORM */
+
 .field {
     margin-bottom: 14px;
 }
@@ -275,6 +282,7 @@ textarea {
 }
 
 /* BUTTONS */
+
 .btn {
     background: linear-gradient(
         135deg,
@@ -308,6 +316,7 @@ textarea {
 }
 
 /* ALERT */
+
 .alert {
     padding: 14px 16px;
     border-radius: 14px;
@@ -325,6 +334,7 @@ textarea {
 }
 
 /* EMPTY */
+
 .empty {
     text-align: center;
     color: var(--muted);
@@ -334,6 +344,7 @@ textarea {
 }
 
 /* TABLE */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -359,6 +370,7 @@ table tbody tr:hover {
 }
 
 /* BADGES */
+
 .badge {
     display: inline-block;
     padding: 6px 10px;
@@ -378,6 +390,7 @@ table tbody tr:hover {
 }
 
 /* CATEGORY */
+
 .category-item {
     display: flex;
     justify-content: space-between;
@@ -387,11 +400,13 @@ table tbody tr:hover {
 }
 
 /* CHART */
+
 canvas {
     margin-top: 15px;
 }
 
 /* SCROLL */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -406,6 +421,7 @@ canvas {
 }
 
 /* METAS */
+
 .goal-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(212,175,55,0.18);
@@ -440,24 +456,21 @@ canvas {
     font-size: 24px;
 }
 
-.progress-bar {
+.goal-card .progress-bar {
+    display: block;
     width: 100%;
-    height: 16px;
+    height: 18px;
     background: #1f2937;
     border-radius: 999px;
     overflow: hidden;
-    margin: 14px 0;
+    margin: 18px 0;
 }
 
-.progress-fill {
-    height: 100%;
+.goal-card .progress-fill {
     display: block;
-    background: linear-gradient(
-        90deg,
-        #d4af37,
-        #f1d57c
-    );
-
+    height: 18px;
+    min-width: 4px;
+    background: linear-gradient(90deg, #d4af37, #f1d57c);
     border-radius: 999px;
     transition: width 0.4s ease;
 }
@@ -471,6 +484,7 @@ canvas {
 }
 
 /* RESPONSIVO */
+
 @media (max-width: 980px) {
 
     .app-shell {
@@ -492,4 +506,3 @@ canvas {
     .goal-values {
         flex-direction: column;
     }
-}
