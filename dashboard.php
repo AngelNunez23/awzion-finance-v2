@@ -101,6 +101,7 @@ if ($balance > 0) {
             <a class="nav-link active" href="dashboard.php">Dashboard</a>
             <a class="nav-link" href="transactions.php">Lançamentos</a>
             <a class="nav-link" href="categories.php">Categorias</a>
+            <a class="nav-link" href="goals.php">Metas</a>
             <a class="nav-link" href="logout.php">Sair</a>
         </nav>
     </aside>
