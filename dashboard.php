@@ -165,20 +165,13 @@ if ($balance > 0) {
                     <h2>Últimos lançamentos</h2>
 
                     <div style="display:flex; gap:10px;">
-                        <a class="btn small-btn" href="transactions.php">
-                            Novo lançamento
-                        </a>
-
-                        <a class="btn small-btn" href="export_pdf.php">
-                            Exportar PDF
-                        </a>
+                        <a class="btn small-btn" href="transactions.php">Novo lançamento</a>
+                        <a class="btn small-btn" href="export_pdf.php">Exportar PDF</a>
                     </div>
                 </div>
 
                 <?php if (!$transactions): ?>
-
                     <div class="empty">Nenhum lançamento neste mês.</div>
-
                 <?php else: ?>
 
                     <table>
@@ -202,11 +195,8 @@ if ($balance > 0) {
                                     </td>
 
                                     <td><?= h($item['title']) ?></td>
-
                                     <td><?= h($item['category_name'] ?? 'Sem categoria') ?></td>
-
                                     <td><?= money((float)$item['amount']) ?></td>
-
                                     <td><?= date('d/m/Y', strtotime($item['transaction_date'])) ?></td>
                                 </tr>
                             <?php endforeach; ?>
@@ -228,6 +218,8 @@ if ($balance > 0) {
                     <div class="empty">Nenhum gasto categorizado neste mês.</div>
 
                 <?php else: ?>
+
+                    <canvas id="categoryChart" style="max-height: 320px; margin-bottom: 20px;"></canvas>
 
                     <?php foreach ($expenseByCategory as $cat): ?>
                         <div class="category-item">
@@ -290,6 +282,52 @@ if (chartCanvas) {
             plugins: {
                 legend: {
                     labels: {
+                        color: '#f5f5f7'
+                    }
+                }
+            }
+        }
+    });
+}
+
+const categoryCanvas = document.getElementById('categoryChart');
+
+if (categoryCanvas) {
+    new Chart(categoryCanvas, {
+        type: 'bar',
+        data: {
+            labels: [
+                <?php foreach ($expenseByCategory as $cat): ?>
+                    '<?= h($cat['name']) ?>',
+                <?php endforeach; ?>
+            ],
+            datasets: [{
+                label: 'Gastos por categoria',
+                data: [
+                    <?php foreach ($expenseByCategory as $cat): ?>
+                        <?= (float)$cat['total'] ?>,
+                    <?php endforeach; ?>
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#f5f5f7'
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: '#f5f5f7'
+                    }
+                },
+                y: {
+                    ticks: {
                         color: '#f5f5f7'
                     }
                 }
