@@ -1,24 +1,28 @@
 # 🚀 AWZION Finance v2
 
-Sistema financeiro profissional desenvolvido em PHP, MySQL e CSS moderno.
+Sistema financeiro profissional desenvolvido em PHP, MySQL e interface moderna estilo SaaS.
 
 ---
 
 # 📌 Sobre o Projeto
 
-O **AWZION Finance v2** é um sistema criado para controle financeiro pessoal e empresarial.
+O **AWZION Finance v2** é um sistema criado para controle financeiro pessoal e empresarial, focado em organização, produtividade e análise financeira moderna.
 
 O sistema permite:
 
 ✅ Controle de ganhos  
 ✅ Controle de gastos  
 ✅ Categorias financeiras  
-✅ Dashboard moderno  
+✅ Dashboard inteligente  
+✅ Metas financeiras  
+✅ Atualização automática de metas  
 ✅ Relatórios mensais  
-✅ Sistema de login  
+✅ Sistema de login seguro  
 ✅ Sessões protegidas  
 ✅ Interface responsiva  
-✅ Gráficos financeiros  
+✅ Gráficos financeiros dinâmicos  
+✅ Exportação PDF  
+✅ Interface premium black & gold  
 
 ---
 
@@ -64,6 +68,34 @@ $dbPass
 
 ---
 
+# 📂 Estrutura do Projeto
+
+```txt
+AWZION-Finance-v2/
+│
+├── dashboard.php
+├── transactions.php
+├── categories.php
+├── goals.php
+├── update_goal.php
+├── export_pdf.php
+├── login.php
+├── register.php
+├── logout.php
+├── config.example.php
+├── style.css
+├── script.js
+│
+├── screenshots/
+│   ├── dashboard.png
+│   ├── dashboard2.png
+│   └── goals.png
+│
+└── README.md
+```
+
+---
+
 # 📸 Screenshots
 
 ## Dashboard
@@ -74,9 +106,16 @@ $dbPass
 
 ---
 
+## Metas Financeiras
+
+![Goals](screenshots/goals.png)
+
+---
+
 # 👨‍💻 Desenvolvedor
 
-**Angel Núñez**  
+## Angel Núñez
+
 🚀 Fundador da AWZION Digital
 
 🌎 Brasil 🇧🇷 & República Dominicana 🇩🇴
@@ -88,31 +127,40 @@ $dbPass
 - Login seguro
 - Dashboard financeiro
 - Controle mensal
-- Categorias
-- Lançamentos
-- Resumo financeiro
+- Controle de metas financeiras
+- Atualização automática de progresso
+- Categorias financeiras
+- Controle de lançamentos
+- Resumo financeiro inteligente
 - Gráficos dinâmicos
+- Exportação PDF
 - Sistema responsivo
 - Interface moderna black & gold
+- Painel estilo SaaS
 
 ---
 
-# 🚀 Projeto em evolução
+# 🚧 Projeto em evolução
 
-Novas funcionalidades serão adicionadas futuramente:
+Próximas funcionalidades:
 
-- Exportação PDF
-- Multiusuário
-- API REST
-- Backup automático
-- App Mobile
-- Metas financeiras
-- Dashboard avançado
-- Notificações
-- Relatórios inteligentes
+- 🔄 App mobile
+- 🔄 Multiusuário avançado
+- 🔄 Notificações
+- 🔄 Backup automático
+
+🚀 AWZION Finance v2 em constante evolução.
 
 ---
 
 # 📌 Status do Projeto
 
 ✅ Em desenvolvimento ativo
+
+---
+
+# 📄 Licença
+
+Este projeto está sob licença de uso privado da AWZION Digital.
+
+© AWZION Digital
